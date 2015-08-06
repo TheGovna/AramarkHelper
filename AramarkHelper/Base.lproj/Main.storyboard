@@ -84,6 +84,71 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="WZu-Al-cJ7">
+            <objects>
+                <viewController id="K0L-l8-Yk8" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ns5-3e-6y3"/>
+                        <viewControllerLayoutGuide type="bottom" id="zVa-An-zSX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0YU-vH-lwd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rose-Hulman Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFH-qf-wvi">
+                                <rect key="frame" x="175" y="77" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Sgi-n9-uCE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSL-gQ-1b9">
+                                <rect key="frame" x="175" y="115" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Qkg-wF-cU2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aramark Helper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-hy-TU4">
+                                <rect key="frame" x="231" y="28" width="138" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHd-DY-ZUF">
+                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="K0L-l8-Yk8" eventType="touchUpInside" id="QxS-6g-N9X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yFH-qf-wvi" firstAttribute="top" secondItem="PMe-hy-TU4" secondAttribute="bottom" constant="25" id="EKY-xv-IcO"/>
+                            <constraint firstAttribute="centerX" secondItem="eSL-gQ-1b9" secondAttribute="centerX" id="NLI-pg-CZV"/>
+                            <constraint firstAttribute="centerX" secondItem="PMe-hy-TU4" secondAttribute="centerX" id="ckZ-tm-cNp"/>
+                            <constraint firstAttribute="centerX" secondItem="yFH-qf-wvi" secondAttribute="centerX" id="crU-x7-MwR"/>
+                            <constraint firstItem="PMe-hy-TU4" firstAttribute="top" secondItem="Ns5-3e-6y3" secondAttribute="bottom" constant="8" id="lRT-A9-tLh"/>
+                            <constraint firstAttribute="centerX" secondItem="RHd-DY-ZUF" secondAttribute="centerX" id="mEV-sH-BMz"/>
+                            <constraint firstAttribute="centerY" secondItem="RHd-DY-ZUF" secondAttribute="centerY" id="mfz-Rd-UEe"/>
+                            <constraint firstItem="eSL-gQ-1b9" firstAttribute="top" secondItem="yFH-qf-wvi" secondAttribute="bottom" constant="8" id="xgE-9q-FiS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="yFH-qf-wvi" id="GDR-9q-xxA"/>
+                        <outlet property="passwordTextField" destination="eSL-gQ-1b9" id="NGH-w9-o44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0p-hq-fuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786" y="0.0"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>

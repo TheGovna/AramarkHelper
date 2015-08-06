@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1041D6D1B73B158001AE611 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1041D6C1B73B158001AE611 /* LoginViewController.m */; };
 		A12ED87A1B72A6B000B88E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8791B72A6B000B88E1D /* main.m */; };
 		A12ED87D1B72A6B000B88E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED87C1B72A6B000B88E1D /* AppDelegate.m */; };
 		A12ED8801B72A6B000B88E1D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED87F1B72A6B000B88E1D /* FirstViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1041D6B1B73B158001AE611 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A1041D6C1B73B158001AE611 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A12ED8741B72A6B000B88E1D /* AramarkHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AramarkHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12ED8781B72A6B000B88E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12ED8791B72A6B000B88E1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				A12ED8A01B72A7B000B88E1D /* AramarkHelper.xcdatamodel */,
 				A12ED87B1B72A6B000B88E1D /* AppDelegate.h */,
 				A12ED87C1B72A6B000B88E1D /* AppDelegate.m */,
+				A1041D6B1B73B158001AE611 /* LoginViewController.h */,
+				A1041D6C1B73B158001AE611 /* LoginViewController.m */,
 				A12ED87E1B72A6B000B88E1D /* FirstViewController.h */,
 				A12ED87F1B72A6B000B88E1D /* FirstViewController.m */,
 				A12ED8811B72A6B000B88E1D /* SecondViewController.h */,
@@ -229,6 +234,7 @@
 			files = (
 				A12ED8831B72A6B000B88E1D /* SecondViewController.m in Sources */,
 				A12ED87D1B72A6B000B88E1D /* AppDelegate.m in Sources */,
+				A1041D6D1B73B158001AE611 /* LoginViewController.m in Sources */,
 				A12ED8A11B72A7B000B88E1D /* AramarkHelper.xcdatamodel in Sources */,
 				A12ED8801B72A6B000B88E1D /* FirstViewController.m in Sources */,
 				A12ED87A1B72A6B000B88E1D /* main.m in Sources */,
