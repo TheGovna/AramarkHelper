@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Rose-Hulman. All rights reserved.
 //
 
-#import "TodaysMenuViewController.h"
+#import "DayMenuViewController.h"
 
-@interface TodaysMenuViewController ()
+@interface DayMenuViewController ()
 
 @end
 
-@implementation TodaysMenuViewController
+@implementation DayMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

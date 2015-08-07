@@ -7,7 +7,7 @@
         <!--Today's Menu-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="TodaysMenuViewController" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="DayMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TodaysMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uec-MZ-m32">
-                                <rect key="frame" x="196" y="290" width="208.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uec-MZ-m32">
+                                <rect key="frame" x="208" y="290" width="184.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,12 +28,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu for August 6, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-xF-P6D">
+                                <rect key="frame" x="205" y="56" width="189.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="9GN-AS-dXp"/>
                             <constraint firstAttribute="centerX" secondItem="H9h-bD-X48" secondAttribute="centerX" id="MFK-5P-qWR"/>
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="Rih-Bf-SMu"/>
+                            <constraint firstItem="iHy-xF-P6D" firstAttribute="top" secondItem="H9h-bD-X48" secondAttribute="bottom" constant="8" symbolic="YES" id="Roy-Qw-feN"/>
+                            <constraint firstAttribute="centerX" secondItem="iHy-xF-P6D" secondAttribute="centerX" id="laM-Pu-S4G"/>
                             <constraint firstAttribute="centerY" secondItem="uec-MZ-m32" secondAttribute="centerY" id="qr3-kI-fYR"/>
                             <constraint firstAttribute="centerX" secondItem="uec-MZ-m32" secondAttribute="centerX" id="yU8-Js-kgq"/>
                         </constraints>
@@ -52,6 +60,24 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Monthy Menu-->
+        <scene sceneID="kGn-Ov-v4g">
+            <objects>
+                <navigationController id="je1-Cz-Bl5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Monthy Menu" id="tQH-bq-rGV"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="87o-Rd-dER">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XRz-qI-2r9" kind="show" id="dCR-H6-bF5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dn-bW-ng0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="389"/>
+        </scene>
         <!--Monthly Menu-->
         <scene sceneID="0qY-vo-Ltv">
             <objects>
@@ -64,14 +90,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-lo-J86">
-                                <rect key="frame" x="213" y="28" width="174.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthlyMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIt-Rt-XaG">
+                                <rect key="frame" x="192" y="290" width="216" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthlyMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIt-Rt-XaG">
-                                <rect key="frame" x="192" y="290" width="216" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-lo-J86">
+                                <rect key="frame" x="213" y="72" width="174.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,8 +105,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jtx-lo-J86" firstAttribute="top" secondItem="7SB-Hv-0rp" secondAttribute="bottom" constant="8" id="AJc-5L-qpn"/>
                             <constraint firstAttribute="centerY" secondItem="QIt-Rt-XaG" secondAttribute="centerY" id="kKp-g4-ucw"/>
+                            <constraint firstItem="Jtx-lo-J86" firstAttribute="top" secondItem="7SB-Hv-0rp" secondAttribute="bottom" constant="8" symbolic="YES" id="maw-2R-84u"/>
                             <constraint firstAttribute="centerX" secondItem="QIt-Rt-XaG" secondAttribute="centerX" id="pjP-yE-Nfa"/>
                             <constraint firstAttribute="centerX" secondItem="Jtx-lo-J86" secondAttribute="centerX" id="tnr-0t-AXx"/>
                         </constraints>
@@ -94,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HjV-cc-0uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="409"/>
+            <point key="canvasLocation" x="1463" y="389"/>
         </scene>
         <!--Hours-->
         <scene sceneID="1Z1-o4-t9M">
@@ -217,7 +243,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="tTF-NM-mKW" kind="relationship" relationship="viewControllers" id="35H-pW-8OK"/>
-                        <segue destination="XRz-qI-2r9" kind="relationship" relationship="viewControllers" id="z3q-j7-6Si"/>
+                        <segue destination="je1-Cz-Bl5" kind="relationship" relationship="viewControllers" id="RMv-HC-aBr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
