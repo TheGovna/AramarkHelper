@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  FirstViewController.m
 //  AramarkHelper
 //
 //  Created by Melissa Thai on 8/5/15.
 //  Copyright (c) 2015 Rose-Hulman. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "TodaysMenuViewController.h"
 
-@interface SecondViewController ()
+@interface TodaysMenuViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation TodaysMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

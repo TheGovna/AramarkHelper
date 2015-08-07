@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstViewController.h
 //  AramarkHelper
 //
 //  Created by Melissa Thai on 8/5/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface TodaysMenuViewController : UIViewController
 
 
 @end

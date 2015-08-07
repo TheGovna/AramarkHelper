@@ -10,13 +10,14 @@
 		A1041D6D1B73B158001AE611 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1041D6C1B73B158001AE611 /* LoginViewController.m */; };
 		A12ED87A1B72A6B000B88E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8791B72A6B000B88E1D /* main.m */; };
 		A12ED87D1B72A6B000B88E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED87C1B72A6B000B88E1D /* AppDelegate.m */; };
-		A12ED8801B72A6B000B88E1D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED87F1B72A6B000B88E1D /* FirstViewController.m */; };
-		A12ED8831B72A6B000B88E1D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8821B72A6B000B88E1D /* SecondViewController.m */; };
+		A12ED8801B72A6B000B88E1D /* TodaysMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED87F1B72A6B000B88E1D /* TodaysMenuViewController.m */; };
+		A12ED8831B72A6B000B88E1D /* MonthlyMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8821B72A6B000B88E1D /* MonthlyMenuViewController.m */; };
 		A12ED8861B72A6B000B88E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12ED8841B72A6B000B88E1D /* Main.storyboard */; };
 		A12ED8881B72A6B000B88E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12ED8871B72A6B000B88E1D /* Images.xcassets */; };
 		A12ED88B1B72A6B000B88E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12ED8891B72A6B000B88E1D /* LaunchScreen.xib */; };
 		A12ED8971B72A6B000B88E1D /* AramarkHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8961B72A6B000B88E1D /* AramarkHelperTests.m */; };
 		A12ED8A11B72A7B000B88E1D /* AramarkHelper.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8A01B72A7B000B88E1D /* AramarkHelper.xcdatamodel */; };
+		A1FF82E81B7481BB005C9EC4 /* HoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FF82E71B7481BB005C9EC4 /* HoursViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +38,10 @@
 		A12ED8791B72A6B000B88E1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A12ED87B1B72A6B000B88E1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A12ED87C1B72A6B000B88E1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A12ED87E1B72A6B000B88E1D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		A12ED87F1B72A6B000B88E1D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		A12ED8811B72A6B000B88E1D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		A12ED8821B72A6B000B88E1D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		A12ED87E1B72A6B000B88E1D /* TodaysMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodaysMenuViewController.h; sourceTree = "<group>"; };
+		A12ED87F1B72A6B000B88E1D /* TodaysMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodaysMenuViewController.m; sourceTree = "<group>"; };
+		A12ED8811B72A6B000B88E1D /* MonthlyMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthlyMenuViewController.h; sourceTree = "<group>"; };
+		A12ED8821B72A6B000B88E1D /* MonthlyMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthlyMenuViewController.m; sourceTree = "<group>"; };
 		A12ED8851B72A6B000B88E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A12ED8871B72A6B000B88E1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A12ED88A1B72A6B000B88E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +49,8 @@
 		A12ED8951B72A6B000B88E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12ED8961B72A6B000B88E1D /* AramarkHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AramarkHelperTests.m; sourceTree = "<group>"; };
 		A12ED8A01B72A7B000B88E1D /* AramarkHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AramarkHelper.xcdatamodel; sourceTree = "<group>"; };
+		A1FF82E61B7481BB005C9EC4 /* HoursViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoursViewController.h; sourceTree = "<group>"; };
+		A1FF82E71B7481BB005C9EC4 /* HoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoursViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +97,12 @@
 				A12ED87C1B72A6B000B88E1D /* AppDelegate.m */,
 				A1041D6B1B73B158001AE611 /* LoginViewController.h */,
 				A1041D6C1B73B158001AE611 /* LoginViewController.m */,
-				A12ED87E1B72A6B000B88E1D /* FirstViewController.h */,
-				A12ED87F1B72A6B000B88E1D /* FirstViewController.m */,
-				A12ED8811B72A6B000B88E1D /* SecondViewController.h */,
-				A12ED8821B72A6B000B88E1D /* SecondViewController.m */,
+				A12ED87E1B72A6B000B88E1D /* TodaysMenuViewController.h */,
+				A12ED87F1B72A6B000B88E1D /* TodaysMenuViewController.m */,
+				A12ED8811B72A6B000B88E1D /* MonthlyMenuViewController.h */,
+				A12ED8821B72A6B000B88E1D /* MonthlyMenuViewController.m */,
+				A1FF82E61B7481BB005C9EC4 /* HoursViewController.h */,
+				A1FF82E71B7481BB005C9EC4 /* HoursViewController.m */,
 				A12ED8841B72A6B000B88E1D /* Main.storyboard */,
 				A12ED8871B72A6B000B88E1D /* Images.xcassets */,
 				A12ED8891B72A6B000B88E1D /* LaunchScreen.xib */,
@@ -232,11 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12ED8831B72A6B000B88E1D /* SecondViewController.m in Sources */,
+				A12ED8831B72A6B000B88E1D /* MonthlyMenuViewController.m in Sources */,
 				A12ED87D1B72A6B000B88E1D /* AppDelegate.m in Sources */,
 				A1041D6D1B73B158001AE611 /* LoginViewController.m in Sources */,
 				A12ED8A11B72A7B000B88E1D /* AramarkHelper.xcdatamodel in Sources */,
-				A12ED8801B72A6B000B88E1D /* FirstViewController.m in Sources */,
+				A12ED8801B72A6B000B88E1D /* TodaysMenuViewController.m in Sources */,
+				A1FF82E81B7481BB005C9EC4 /* HoursViewController.m in Sources */,
 				A12ED87A1B72A6B000B88E1D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
