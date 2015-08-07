@@ -10,4 +10,6 @@
 
 @interface HoursViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *dbLabel;
+
 @end
