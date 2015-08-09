@@ -19,19 +19,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uec-MZ-m32">
                                 <rect key="frame" x="208" y="290" width="184.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9h-bD-X48">
                                 <rect key="frame" x="213" y="28" width="174.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu for August 6, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-xF-P6D">
                                 <rect key="frame" x="205" y="56" width="189.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -93,13 +93,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthlyMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIt-Rt-XaG">
                                 <rect key="frame" x="192" y="290" width="216" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-lo-J86">
                                 <rect key="frame" x="213" y="72" width="174.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -137,23 +137,83 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfa-2A-gPx">
                                 <rect key="frame" x="213" y="28" width="174.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HoursViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc6-jH-XLm">
-                                <rect key="frame" x="221.5" y="290" width="157.5" height="20.5"/>
+                                <rect key="frame" x="221" y="290" width="157.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-fT-SvQ">
+                                <rect key="frame" x="63" y="56" width="475" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="kcS-pd-RH6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="439" id="meX-fx-tC2"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Dining Hall"/>
+                                    <segment title="The Worx"/>
+                                    <segment title="Logan's"/>
+                                    <segment title="Subway"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kcS-pd-RH6"/>
+                                        <exclude reference="meX-fx-tC2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="kcS-pd-RH6"/>
+                                    </mask>
+                                </variation>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nXg-fT-SvQ" secondAttribute="centerX" id="7cV-03-7jW"/>
                             <constraint firstItem="Cfa-2A-gPx" firstAttribute="top" secondItem="SQA-WR-Kl9" secondAttribute="bottom" constant="8" id="T82-eX-I8Z"/>
+                            <constraint firstItem="nXg-fT-SvQ" firstAttribute="leading" secondItem="ijc-FJ-CYm" secondAttribute="leading" constant="16" id="W4I-Ew-n7W"/>
                             <constraint firstAttribute="centerX" secondItem="Vc6-jH-XLm" secondAttribute="centerX" id="WS5-M7-OWt"/>
+                            <constraint firstAttribute="centerX" secondItem="nXg-fT-SvQ" secondAttribute="centerX" id="XOD-yz-aHx"/>
                             <constraint firstAttribute="centerX" secondItem="Cfa-2A-gPx" secondAttribute="centerX" id="b40-rP-Chm"/>
+                            <constraint firstAttribute="centerX" secondItem="nXg-fT-SvQ" secondAttribute="centerX" id="grP-Vv-huL"/>
                             <constraint firstAttribute="centerY" secondItem="Vc6-jH-XLm" secondAttribute="centerY" id="ngx-HQ-BJM"/>
+                            <constraint firstItem="nXg-fT-SvQ" firstAttribute="top" secondItem="Cfa-2A-gPx" secondAttribute="bottom" constant="8" symbolic="YES" id="vgb-DM-pPE"/>
+                            <constraint firstAttribute="trailing" secondItem="nXg-fT-SvQ" secondAttribute="trailing" constant="16" id="zQU-Lj-X2K"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7cV-03-7jW"/>
+                                <exclude reference="W4I-Ew-n7W"/>
+                                <exclude reference="XOD-yz-aHx"/>
+                                <exclude reference="grP-Vv-huL"/>
+                                <exclude reference="zQU-Lj-X2K"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="grP-Vv-huL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="7cV-03-7jW"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="XOD-yz-aHx"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="W4I-Ew-n7W"/>
+                                <include reference="zQU-Lj-X2K"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hours" id="CwA-Qa-78M"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -163,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yP4-o7-DJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1117"/>
+            <point key="canvasLocation" x="750" y="1116.75"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="WZu-Al-cJ7">
@@ -196,7 +256,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aramark Helper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-hy-TU4">
                                 <rect key="frame" x="231" y="28" width="138" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHd-DY-ZUF">
