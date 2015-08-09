@@ -16,12 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [self.diningHallHoursView setHidden:NO];
+    [self.worxHoursView setHidden:YES];
 }
 
 /*
@@ -34,4 +31,18 @@
 }
 */
 
+- (IBAction)selectedSegmentedControl:(id)sender {
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case 0:
+            [self.diningHallHoursView setHidden:NO];
+            [self.worxHoursView setHidden:YES];
+            break;
+        case 1:
+            [self.diningHallHoursView setHidden:YES];
+            [self.worxHoursView setHidden:NO];
+            break;
+        default:
+            break;
+    }
+}
 @end

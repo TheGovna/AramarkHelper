@@ -134,20 +134,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfa-2A-gPx">
-                                <rect key="frame" x="213" y="28" width="174.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HoursViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc6-jH-XLm">
-                                <rect key="frame" x="221" y="290" width="157.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-fT-SvQ">
-                                <rect key="frame" x="63" y="56" width="475" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-fT-SvQ">
+                                <rect key="frame" x="0.0" y="56" width="319" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="kcS-pd-RH6"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="439" id="meX-fx-tC2"/>
@@ -169,18 +157,133 @@
                                         <include reference="kcS-pd-RH6"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="selectedSegmentedControl:" destination="tTF-NM-mKW" eventType="valueChanged" id="OfT-qu-n9c"/>
+                                </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfa-2A-gPx">
+                                <rect key="frame" x="213" y="28" width="174.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TzS-9n-lVw" userLabel="Dining Hall Hours View">
+                                <rect key="frame" x="16" y="92" width="568" height="451"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQq-CS-Icp">
+                                        <rect key="frame" x="247.5" y="8" width="73" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn6-w9-uJX">
+                                        <rect key="frame" x="260.5" y="135" width="47.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ru-wf-ymc">
+                                        <rect key="frame" x="259" y="261" width="50" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtX-LS-dEt" userLabel="Breakfast Text View">
+                                        <rect key="frame" x="159" y="36.5" width="250" height="90"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="1Fv-9u-uAM"/>
+                                            <constraint firstAttribute="width" constant="250" id="SX8-x6-fPc"/>
+                                        </constraints>
+                                        <string key="text">Monday-Friday: 7:00 am - 9:30 am
+Saturday: Closed
+Sunday: 8:00 am - 9:00 am</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IX2-7c-Ea8" userLabel="Lunch Text View">
+                                        <rect key="frame" x="159" y="163.5" width="250" height="90"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Vgg-iI-Epu"/>
+                                            <constraint firstAttribute="height" constant="90" id="vpk-Cy-bA5"/>
+                                        </constraints>
+                                        <string key="text">Monday-Friday: 10:50 am - 1:50 pm
+Saturday: 11:00 am - 1:00 pm
+Sunday: 11:30 am - 1:00 pm</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCY-nM-Haq" userLabel="Dinner Text View">
+                                        <rect key="frame" x="159" y="289.5" width="250" height="90"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="JOZ-tz-HOU"/>
+                                            <constraint firstAttribute="height" constant="90" id="iue-rs-hhv"/>
+                                        </constraints>
+                                        <string key="text">Monday-Thursday: 5:00 pm - 7:15 pm
+Friday: 5:00 pm - 6:45 pm
+Saturday &amp; Sunday: Closed</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="bCY-nM-Haq" secondAttribute="centerX" id="2kE-Q7-UMl"/>
+                                    <constraint firstAttribute="centerX" secondItem="hn6-w9-uJX" secondAttribute="centerX" id="Kt4-j3-FFB"/>
+                                    <constraint firstItem="TQq-CS-Icp" firstAttribute="top" secondItem="TzS-9n-lVw" secondAttribute="top" constant="8" id="Qsg-lg-4pD"/>
+                                    <constraint firstItem="IX2-7c-Ea8" firstAttribute="top" secondItem="hn6-w9-uJX" secondAttribute="bottom" constant="8" id="VCZ-yX-SOH"/>
+                                    <constraint firstItem="wtX-LS-dEt" firstAttribute="top" secondItem="TQq-CS-Icp" secondAttribute="bottom" constant="8" id="gSY-H7-q9K"/>
+                                    <constraint firstAttribute="centerX" secondItem="IX2-7c-Ea8" secondAttribute="centerX" id="gs7-jf-SN4"/>
+                                    <constraint firstAttribute="centerX" secondItem="wtX-LS-dEt" secondAttribute="centerX" id="i02-A1-vjl"/>
+                                    <constraint firstItem="bCY-nM-Haq" firstAttribute="top" secondItem="4Ru-wf-ymc" secondAttribute="bottom" constant="8" id="k5Z-WD-aME"/>
+                                    <constraint firstItem="hn6-w9-uJX" firstAttribute="top" secondItem="wtX-LS-dEt" secondAttribute="bottom" constant="8" id="kHu-vF-rHe"/>
+                                    <constraint firstItem="4Ru-wf-ymc" firstAttribute="top" secondItem="IX2-7c-Ea8" secondAttribute="bottom" constant="8" id="nTY-1w-2mi"/>
+                                    <constraint firstAttribute="centerX" secondItem="4Ru-wf-ymc" secondAttribute="centerX" id="rIL-dK-KNg"/>
+                                    <constraint firstAttribute="centerX" secondItem="TQq-CS-Icp" secondAttribute="centerX" id="rVj-T5-6au"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-dM-kV6" userLabel="The Worx Hours View">
+                                <rect key="frame" x="16" y="92" width="568" height="451"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq7-Rz-Et3" userLabel="The Worx Hours Text View">
+                                        <rect key="frame" x="159" y="8" width="250" height="90"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="5X3-6z-yZL"/>
+                                            <constraint firstAttribute="height" constant="90" id="aj8-QM-btb"/>
+                                        </constraints>
+                                        <string key="text">Monday-Friday: 10:30 am - 11:00 pm
+Saturday: 4:00 pm - 11:00 pm
+Sunday: Closed </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="jq7-Rz-Et3" secondAttribute="centerX" id="c6j-Jf-rDA"/>
+                                    <constraint firstItem="jq7-Rz-Et3" firstAttribute="top" secondItem="LXF-dM-kV6" secondAttribute="top" constant="8" id="fkp-rZ-drr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="nXg-fT-SvQ" secondAttribute="centerX" id="7cV-03-7jW"/>
+                            <constraint firstItem="oq3-9z-rJh" firstAttribute="top" secondItem="LXF-dM-kV6" secondAttribute="bottom" constant="8" symbolic="YES" id="8IQ-6D-uGR"/>
+                            <constraint firstItem="TzS-9n-lVw" firstAttribute="leading" secondItem="ijc-FJ-CYm" secondAttribute="leading" constant="16" id="CAH-RF-UHJ"/>
+                            <constraint firstItem="LXF-dM-kV6" firstAttribute="leading" secondItem="ijc-FJ-CYm" secondAttribute="leading" constant="16" id="LRd-Yl-ba1"/>
+                            <constraint firstAttribute="trailing" secondItem="TzS-9n-lVw" secondAttribute="trailing" constant="16" id="RpU-pc-7yD"/>
                             <constraint firstItem="Cfa-2A-gPx" firstAttribute="top" secondItem="SQA-WR-Kl9" secondAttribute="bottom" constant="8" id="T82-eX-I8Z"/>
                             <constraint firstItem="nXg-fT-SvQ" firstAttribute="leading" secondItem="ijc-FJ-CYm" secondAttribute="leading" constant="16" id="W4I-Ew-n7W"/>
-                            <constraint firstAttribute="centerX" secondItem="Vc6-jH-XLm" secondAttribute="centerX" id="WS5-M7-OWt"/>
                             <constraint firstAttribute="centerX" secondItem="nXg-fT-SvQ" secondAttribute="centerX" id="XOD-yz-aHx"/>
+                            <constraint firstItem="LXF-dM-kV6" firstAttribute="top" secondItem="nXg-fT-SvQ" secondAttribute="bottom" constant="8" symbolic="YES" id="XSf-DK-Dqe"/>
                             <constraint firstAttribute="centerX" secondItem="Cfa-2A-gPx" secondAttribute="centerX" id="b40-rP-Chm"/>
+                            <constraint firstItem="TzS-9n-lVw" firstAttribute="top" secondItem="nXg-fT-SvQ" secondAttribute="bottom" constant="8" id="gY3-5j-7U9"/>
                             <constraint firstAttribute="centerX" secondItem="nXg-fT-SvQ" secondAttribute="centerX" id="grP-Vv-huL"/>
-                            <constraint firstAttribute="centerY" secondItem="Vc6-jH-XLm" secondAttribute="centerY" id="ngx-HQ-BJM"/>
+                            <constraint firstAttribute="trailing" secondItem="LXF-dM-kV6" secondAttribute="trailing" constant="16" id="ifQ-Yn-h7N"/>
+                            <constraint firstItem="oq3-9z-rJh" firstAttribute="top" secondItem="TzS-9n-lVw" secondAttribute="bottom" constant="8" id="qxB-SB-xSo"/>
                             <constraint firstItem="nXg-fT-SvQ" firstAttribute="top" secondItem="Cfa-2A-gPx" secondAttribute="bottom" constant="8" symbolic="YES" id="vgb-DM-pPE"/>
                             <constraint firstAttribute="trailing" secondItem="nXg-fT-SvQ" secondAttribute="trailing" constant="16" id="zQU-Lj-X2K"/>
                         </constraints>
@@ -219,11 +322,14 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dbLabel" destination="Cfa-2A-gPx" id="jjb-C0-uZD"/>
+                        <outlet property="diningHallHoursView" destination="TzS-9n-lVw" id="BWF-ki-K3R"/>
+                        <outlet property="segmentedControl" destination="nXg-fT-SvQ" id="ijp-5O-yzs"/>
+                        <outlet property="worxHoursView" destination="LXF-dM-kV6" id="cUz-km-kxX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yP4-o7-DJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1116.75"/>
+            <point key="canvasLocation" x="750" y="1116"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="WZu-Al-cJ7">

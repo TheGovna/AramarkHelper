@@ -17,6 +17,7 @@
 		A12ED88B1B72A6B000B88E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12ED8891B72A6B000B88E1D /* LaunchScreen.xib */; };
 		A12ED8971B72A6B000B88E1D /* AramarkHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8961B72A6B000B88E1D /* AramarkHelperTests.m */; };
 		A12ED8A11B72A7B000B88E1D /* AramarkHelper.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8A01B72A7B000B88E1D /* AramarkHelper.xcdatamodel */; };
+		A1731ED01B77F82B0085898D /* DiningHallHoursView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1731ECF1B77F82B0085898D /* DiningHallHoursView.m */; };
 		A1FF82E81B7481BB005C9EC4 /* HoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FF82E71B7481BB005C9EC4 /* HoursViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,8 @@
 		A12ED8951B72A6B000B88E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12ED8961B72A6B000B88E1D /* AramarkHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AramarkHelperTests.m; sourceTree = "<group>"; };
 		A12ED8A01B72A7B000B88E1D /* AramarkHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AramarkHelper.xcdatamodel; sourceTree = "<group>"; };
+		A1731ECE1B77F82B0085898D /* DiningHallHoursView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiningHallHoursView.h; sourceTree = "<group>"; };
+		A1731ECF1B77F82B0085898D /* DiningHallHoursView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiningHallHoursView.m; sourceTree = "<group>"; };
 		A1FF82E61B7481BB005C9EC4 /* HoursViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoursViewController.h; sourceTree = "<group>"; };
 		A1FF82E71B7481BB005C9EC4 /* HoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoursViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +109,8 @@
 				A12ED8841B72A6B000B88E1D /* Main.storyboard */,
 				A12ED8871B72A6B000B88E1D /* Images.xcassets */,
 				A12ED8891B72A6B000B88E1D /* LaunchScreen.xib */,
+				A1731ECE1B77F82B0085898D /* DiningHallHoursView.h */,
+				A1731ECF1B77F82B0085898D /* DiningHallHoursView.m */,
 				A12ED8771B72A6B000B88E1D /* Supporting Files */,
 			);
 			path = AramarkHelper;
@@ -243,6 +248,7 @@
 				A12ED8A11B72A7B000B88E1D /* AramarkHelper.xcdatamodel in Sources */,
 				A12ED8801B72A6B000B88E1D /* DayMenuViewController.m in Sources */,
 				A1FF82E81B7481BB005C9EC4 /* HoursViewController.m in Sources */,
+				A1731ED01B77F82B0085898D /* DiningHallHoursView.m in Sources */,
 				A12ED87A1B72A6B000B88E1D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +380,7 @@
 				INFOPLIST_FILE = AramarkHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -384,6 +391,7 @@
 				INFOPLIST_FILE = AramarkHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

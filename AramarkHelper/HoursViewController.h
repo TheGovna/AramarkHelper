@@ -11,5 +11,11 @@
 @interface HoursViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *dbLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
+@property (weak, nonatomic) IBOutlet UIView *diningHallHoursView;
+@property (weak, nonatomic) IBOutlet UIView *worxHoursView;
+
+- (IBAction)selectedSegmentedControl:(id)sender;
 
 @end
