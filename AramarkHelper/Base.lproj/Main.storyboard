@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uec-MZ-m32">
-                                <rect key="frame" x="208" y="290" width="184.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9h-bD-X48">
                                 <rect key="frame" x="213" y="28" width="174.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -42,8 +36,6 @@
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="Rih-Bf-SMu"/>
                             <constraint firstItem="iHy-xF-P6D" firstAttribute="top" secondItem="H9h-bD-X48" secondAttribute="bottom" constant="8" symbolic="YES" id="Roy-Qw-feN"/>
                             <constraint firstAttribute="centerX" secondItem="iHy-xF-P6D" secondAttribute="centerX" id="laM-Pu-S4G"/>
-                            <constraint firstAttribute="centerY" secondItem="uec-MZ-m32" secondAttribute="centerY" id="qr3-kI-fYR"/>
-                            <constraint firstAttribute="centerX" secondItem="uec-MZ-m32" secondAttribute="centerX" id="yU8-Js-kgq"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -60,21 +52,20 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Monthy Menu-->
-        <scene sceneID="kGn-Ov-v4g">
+        <!--Monthly Menu-->
+        <scene sceneID="fIQ-CJ-PjW">
             <objects>
-                <navigationController id="je1-Cz-Bl5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Monthy Menu" id="tQH-bq-rGV"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="87o-Rd-dER">
+                <navigationController id="vEH-J2-q2Q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Monthly Menu" id="sjH-E2-aia"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0eo-jJ-HrG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="XRz-qI-2r9" kind="show" id="dCR-H6-bF5"/>
+                        <segue destination="XRz-qI-2r9" kind="relationship" relationship="rootViewController" id="N0E-Hl-Xe4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6dn-bW-ng0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pc1-BG-vku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="389"/>
         </scene>
@@ -465,7 +456,7 @@ Sunday: 4:00 pm - Midnight </string>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="tTF-NM-mKW" kind="relationship" relationship="viewControllers" id="35H-pW-8OK"/>
-                        <segue destination="je1-Cz-Bl5" kind="relationship" relationship="viewControllers" id="RMv-HC-aBr"/>
+                        <segue destination="vEH-J2-q2Q" kind="relationship" relationship="viewControllers" id="AaD-l0-7Hv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
