@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *diningHallHoursView;
 @property (weak, nonatomic) IBOutlet UIView *worxHoursView;
+@property (weak, nonatomic) IBOutlet UIView *logansHoursView;
+@property (weak, nonatomic) IBOutlet UIView *subwayHoursView;
 
 - (IBAction)selectedSegmentedControl:(id)sender;
 

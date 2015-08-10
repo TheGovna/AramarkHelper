@@ -19,6 +19,8 @@
     
     [self.diningHallHoursView setHidden:NO];
     [self.worxHoursView setHidden:YES];
+    [self.logansHoursView setHidden:YES];
+    [self.subwayHoursView setHidden:YES];
 }
 
 /*
@@ -36,10 +38,26 @@
         case 0:
             [self.diningHallHoursView setHidden:NO];
             [self.worxHoursView setHidden:YES];
+            [self.logansHoursView setHidden:YES];
+            [self.subwayHoursView setHidden:YES];
             break;
         case 1:
             [self.diningHallHoursView setHidden:YES];
             [self.worxHoursView setHidden:NO];
+            [self.logansHoursView setHidden:YES];
+            [self.subwayHoursView setHidden:YES];
+            break;
+        case 2:
+            [self.diningHallHoursView setHidden:YES];
+            [self.worxHoursView setHidden:YES];
+            [self.logansHoursView setHidden:NO];
+            [self.subwayHoursView setHidden:YES];
+            break;
+        case 3:
+            [self.diningHallHoursView setHidden:YES];
+            [self.worxHoursView setHidden:YES];
+            [self.logansHoursView setHidden:YES];
+            [self.subwayHoursView setHidden:NO];
             break;
         default:
             break;
