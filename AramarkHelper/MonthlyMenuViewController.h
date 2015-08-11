@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JTCalendar/JTCalendar.h>
 
-@interface MonthlyMenuViewController : UIViewController
+@interface MonthlyMenuViewController : UIViewController <JTCalendarDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dbLabel;
+
+@property (weak, nonatomic) IBOutlet JTCalendarMenuView *calendarMenuView;
+@property (weak, nonatomic) IBOutlet JTHorizontalCalendarView *calendarContentView;
+
+@property (strong, nonatomic) JTCalendarManager *calendarManager;
 
 @end
 

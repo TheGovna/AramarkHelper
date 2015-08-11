@@ -81,31 +81,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthlyMenuViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIt-Rt-XaG">
-                                <rect key="frame" x="192" y="290" width="216" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-lo-J86">
                                 <rect key="frame" x="213" y="72" width="174.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31C-Gq-tOG" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="100" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eeG-V5-oSj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-7A-PGg" customClass="JTHorizontalCalendarView">
+                                <rect key="frame" x="0.0" y="150" width="600" height="401"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="QIt-Rt-XaG" secondAttribute="centerY" id="kKp-g4-ucw"/>
+                            <constraint firstItem="Bz6-7A-PGg" firstAttribute="leading" secondItem="QAs-op-koA" secondAttribute="leading" id="7vv-Mg-7Sp"/>
+                            <constraint firstItem="31C-Gq-tOG" firstAttribute="top" secondItem="Jtx-lo-J86" secondAttribute="bottom" constant="8" symbolic="YES" id="90v-xb-tSi"/>
+                            <constraint firstAttribute="trailing" secondItem="Bz6-7A-PGg" secondAttribute="trailing" id="H3Q-nx-fXA"/>
+                            <constraint firstItem="NGW-fy-5yq" firstAttribute="top" secondItem="Bz6-7A-PGg" secondAttribute="bottom" id="ZPT-FR-COZ"/>
+                            <constraint firstItem="31C-Gq-tOG" firstAttribute="leading" secondItem="QAs-op-koA" secondAttribute="leading" id="dqQ-q0-DQa"/>
                             <constraint firstItem="Jtx-lo-J86" firstAttribute="top" secondItem="7SB-Hv-0rp" secondAttribute="bottom" constant="8" symbolic="YES" id="maw-2R-84u"/>
-                            <constraint firstAttribute="centerX" secondItem="QIt-Rt-XaG" secondAttribute="centerX" id="pjP-yE-Nfa"/>
+                            <constraint firstItem="Bz6-7A-PGg" firstAttribute="top" secondItem="31C-Gq-tOG" secondAttribute="bottom" id="oSj-42-khs"/>
                             <constraint firstAttribute="centerX" secondItem="Jtx-lo-J86" secondAttribute="centerX" id="tnr-0t-AXx"/>
+                            <constraint firstAttribute="trailing" secondItem="31C-Gq-tOG" secondAttribute="trailing" id="uc0-BM-2Q0"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Monthly Menu" id="gPf-Sj-b4U"/>
                     <navigationItem key="navigationItem" id="T9Z-83-qFk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="calendarContentView" destination="Bz6-7A-PGg" id="TYK-8Z-Kvs"/>
+                        <outlet property="calendarMenuView" destination="31C-Gq-tOG" id="diK-KQ-5XT"/>
                         <outlet property="dbLabel" destination="Jtx-lo-J86" id="q7T-En-RO8"/>
                     </connections>
                 </viewController>
