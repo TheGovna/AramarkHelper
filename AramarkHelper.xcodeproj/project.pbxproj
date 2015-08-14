@@ -42,6 +42,7 @@
 		0A9E41C51B7E0C8400B178B4 /* GTLAramarkHelperMenuFetcherPeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E41BA1B7E0C8400B178B4 /* GTLAramarkHelperMenuFetcherPeriodCollection.m */; };
 		0A9E41C61B7E0C8400B178B4 /* GTLQueryAramarkHelperMenuFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E41BC1B7E0C8400B178B4 /* GTLQueryAramarkHelperMenuFetcher.m */; };
 		0A9E41C71B7E0C8400B178B4 /* GTLServiceAramarkHelperMenuFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E41BE1B7E0C8400B178B4 /* GTLServiceAramarkHelperMenuFetcher.m */; };
+		0A9E41CF1B7E205900B178B4 /* MenuTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E41CE1B7E205900B178B4 /* MenuTableDataSource.swift */; };
 		A1041D6D1B73B158001AE611 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1041D6C1B73B158001AE611 /* LoginViewController.m */; };
 		A12ED87A1B72A6B000B88E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8791B72A6B000B88E1D /* main.m */; };
 		A12ED87D1B72A6B000B88E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED87C1B72A6B000B88E1D /* AppDelegate.m */; };
@@ -141,6 +142,7 @@
 		0A9E41BC1B7E0C8400B178B4 /* GTLQueryAramarkHelperMenuFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLQueryAramarkHelperMenuFetcher.m; sourceTree = "<group>"; };
 		0A9E41BD1B7E0C8400B178B4 /* GTLServiceAramarkHelperMenuFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLServiceAramarkHelperMenuFetcher.h; sourceTree = "<group>"; };
 		0A9E41BE1B7E0C8400B178B4 /* GTLServiceAramarkHelperMenuFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLServiceAramarkHelperMenuFetcher.m; sourceTree = "<group>"; };
+		0A9E41CE1B7E205900B178B4 /* MenuTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableDataSource.swift; sourceTree = "<group>"; };
 		340C931C955E006BEF0D01EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0C882C8324C4916A141CED /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1041D6B1B73B158001AE611 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				A12ED8771B72A6B000B88E1D /* Supporting Files */,
 				0A9E415C1B7E08F800B178B4 /* DayMenuViewController.swift */,
 				0A9E415B1B7E08F800B178B4 /* AramarkHelper-Bridging-Header.h */,
+				0A9E41CE1B7E205900B178B4 /* MenuTableDataSource.swift */,
 			);
 			path = AramarkHelper;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				A12ED87D1B72A6B000B88E1D /* AppDelegate.m in Sources */,
 				0A9E41941B7E0ADB00B178B4 /* GTLQuery.m in Sources */,
 				0A9E41961B7E0ADB00B178B4 /* GTLService.m in Sources */,
+				0A9E41CF1B7E205900B178B4 /* MenuTableDataSource.swift in Sources */,
 				0A9E41A91B7E0ADB00B178B4 /* GTMOAuth2SignIn.m in Sources */,
 				A1041D6D1B73B158001AE611 /* LoginViewController.m in Sources */,
 				0A9E41A11B7E0ADB00B178B4 /* GTMHTTPFetcher.m in Sources */,

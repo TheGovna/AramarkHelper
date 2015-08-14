@@ -40,53 +40,53 @@
                                     <action selector="selectedPeriod:" destination="9pv-A4-QxB" eventType="valueChanged" id="Nyl-7l-7vZ"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vg8-In-SIf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YFg-VG-xGf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Vg8-In-SIf" secondAttribute="bottom" id="8cS-mG-Rh5"/>
-                            <constraint firstItem="Vg8-In-SIf" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="8tA-2R-etc"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="YFg-VG-xGf" secondAttribute="bottom" id="21d-qy-JqD"/>
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="9GN-AS-dXp"/>
+                            <constraint firstItem="YFg-VG-xGf" firstAttribute="top" secondItem="1hd-BV-q7b" secondAttribute="bottom" constant="8" id="Dg5-DS-36b"/>
+                            <constraint firstItem="YFg-VG-xGf" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="Fz4-da-h4F"/>
                             <constraint firstAttribute="centerX" secondItem="H9h-bD-X48" secondAttribute="centerX" id="MFK-5P-qWR"/>
                             <constraint firstItem="1hd-BV-q7b" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="MTu-PJ-248"/>
-                            <constraint firstItem="Vg8-In-SIf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Pi4-zl-PDB"/>
+                            <constraint firstItem="YFg-VG-xGf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Oeh-wx-rqF"/>
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="Rih-Bf-SMu"/>
                             <constraint firstItem="iHy-xF-P6D" firstAttribute="top" secondItem="H9h-bD-X48" secondAttribute="bottom" constant="8" symbolic="YES" id="Roy-Qw-feN"/>
-                            <constraint firstItem="Vg8-In-SIf" firstAttribute="top" secondItem="1hd-BV-q7b" secondAttribute="bottom" constant="8" id="Sx3-mH-cLU"/>
                             <constraint firstItem="1hd-BV-q7b" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="U1g-eM-8oV"/>
                             <constraint firstItem="1hd-BV-q7b" firstAttribute="top" secondItem="iHy-xF-P6D" secondAttribute="bottom" constant="15" id="gNc-Ua-EPj"/>
                             <constraint firstAttribute="centerX" secondItem="iHy-xF-P6D" secondAttribute="centerX" id="laM-Pu-S4G"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Vg8-In-SIf"/>
+                                <exclude reference="YFg-VG-xGf"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="MTu-PJ-248"/>
                                 <exclude reference="U1g-eM-8oV"/>
                                 <exclude reference="gNc-Ua-EPj"/>
                                 <exclude reference="Rih-Bf-SMu"/>
-                                <exclude reference="8tA-2R-etc"/>
-                                <exclude reference="Pi4-zl-PDB"/>
-                                <exclude reference="Sx3-mH-cLU"/>
-                                <exclude reference="8cS-mG-Rh5"/>
+                                <exclude reference="Dg5-DS-36b"/>
+                                <exclude reference="Fz4-da-h4F"/>
+                                <exclude reference="Oeh-wx-rqF"/>
+                                <exclude reference="21d-qy-JqD"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Vg8-In-SIf"/>
+                                <include reference="YFg-VG-xGf"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="MTu-PJ-248"/>
                                 <include reference="U1g-eM-8oV"/>
                                 <include reference="gNc-Ua-EPj"/>
-                                <include reference="8tA-2R-etc"/>
-                                <include reference="Pi4-zl-PDB"/>
-                                <include reference="Sx3-mH-cLU"/>
-                                <include reference="8cS-mG-Rh5"/>
+                                <include reference="Dg5-DS-36b"/>
+                                <include reference="Fz4-da-h4F"/>
+                                <include reference="Oeh-wx-rqF"/>
+                                <include reference="21d-qy-JqD"/>
                             </mask>
                         </variation>
                     </view>
@@ -94,7 +94,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="iHy-xF-P6D" id="bV4-hV-cVN"/>
                         <outlet property="dbLabel" destination="H9h-bD-X48" id="B19-rr-VgW"/>
-                        <outlet property="menuTableView" destination="Vg8-In-SIf" id="w1u-ob-WNY"/>
+                        <outlet property="menuTableView" destination="YFg-VG-xGf" id="haN-gf-AKU"/>
                         <outlet property="periodSegment" destination="1hd-BV-q7b" id="qOU-0k-4Qk"/>
                     </connections>
                 </viewController>

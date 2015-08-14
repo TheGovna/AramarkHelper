@@ -14,6 +14,7 @@ class DayMenuViewController: UIViewController {
     @IBOutlet weak var dbLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var menuTableView: UITableView!
+    var menuDataSource : MenuTableDataSource?
     
     @IBAction func selectedPeriod(sender: AnyObject) {
         updateTable()
@@ -47,7 +48,10 @@ class DayMenuViewController: UIViewController {
     
     func updateTable(){
         println("selected : \(periodSegment.selectedSegmentIndex)")
-        var string:[Int] = [periodSegment.selectedSegmentIndex]
+        menuDataSource = MenuTableDataSource()
+        menuDataSource!.periodTag = periodSegment.selectedSegmentIndex
+        menuTableView.dataSource = menuDataSource
+        menuTableView.reloadData()
     }
     
     
