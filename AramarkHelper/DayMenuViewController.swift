@@ -48,7 +48,7 @@ class DayMenuViewController: UIViewController {
     
     func updateTable(){
         println("selected : \(periodSegment.selectedSegmentIndex)")
-        menuDataSource = MenuTableDataSource()
+        menuDataSource = MenuTableDataSource(date: NSDate(), periodTag: periodSegment.selectedSegmentIndex)
         menuDataSource!.periodTag = periodSegment.selectedSegmentIndex
         menuTableView.dataSource = menuDataSource
         menuTableView.reloadData()
