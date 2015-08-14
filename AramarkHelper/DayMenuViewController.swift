@@ -26,6 +26,14 @@ class DayMenuViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        if self.date == nil{
+            self.date = NSDate()
+        }
+        var usLocale = NSLocale(localeIdentifier: "en_US")
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.locale = usLocale
+        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle    
+        self.dateLabel.text = "Menu for \(dateFormatter.stringFromDate(self.date!))"
         updateTable()
     }
     override func didReceiveMemoryWarning() {
@@ -48,7 +56,7 @@ class DayMenuViewController: UIViewController {
     
     func updateTable(){
         println("selected : \(periodSegment.selectedSegmentIndex)")
-        menuDataSource = MenuTableDataSource(date: NSDate(), periodTag: periodSegment.selectedSegmentIndex, tView: self.menuTableView)
+        menuDataSource = MenuTableDataSource(date: self.date!, periodTag: periodSegment.selectedSegmentIndex, tView: self.menuTableView)
         menuDataSource!.periodTag = periodSegment.selectedSegmentIndex
         menuTableView.dataSource = menuDataSource
         menuTableView.reloadData()
