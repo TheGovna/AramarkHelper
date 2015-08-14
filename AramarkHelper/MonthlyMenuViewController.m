@@ -7,6 +7,8 @@
 //
 
 #import "MonthlyMenuViewController.h"
+#define showMenuSeguoIdentifier @"ShowMenuSeguoIdentifier"
+#import "AramarkHelper-Swift.h"
 
 @interface MonthlyMenuViewController ()
 {
@@ -93,6 +95,7 @@
                         dayView.circleView.transform = CGAffineTransformIdentity;
                         [_calendarManager reload];
                     } completion:nil];
+    [self performSegueWithIdentifier:showMenuSeguoIdentifier sender:nil];
     
     
     // Load the previous or next page if touch a day from another month
@@ -178,6 +181,13 @@
         }
         
         [_eventsByDate[key] addObject:randomDate];
+    }
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:showMenuSeguoIdentifier]){
+        DayMenuViewController* dmvc = [segue destinationViewController];
+        [dmvc setDate:_dateSelected];
     }
 }
 

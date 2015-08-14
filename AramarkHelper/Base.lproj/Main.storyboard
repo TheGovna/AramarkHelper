@@ -169,11 +169,12 @@
                         <outlet property="calendarContentView" destination="Bz6-7A-PGg" id="TYK-8Z-Kvs"/>
                         <outlet property="calendarMenuView" destination="31C-Gq-tOG" id="diK-KQ-5XT"/>
                         <outlet property="dbLabel" destination="Jtx-lo-J86" id="q7T-En-RO8"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="ShowMenuSeguoIdentifier" id="z8q-uw-cbT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HjV-cc-0uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1463" y="389"/>
+            <point key="canvasLocation" x="1572" y="-329.25"/>
         </scene>
         <!--Hours-->
         <scene sceneID="1Z1-o4-t9M">
@@ -529,4 +530,7 @@ Sunday: 4:00 pm - Midnight </string>
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="z8q-uw-cbT"/>
+    </inferredMetricsTieBreakers>
 </document>

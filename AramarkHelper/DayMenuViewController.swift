@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DayMenuViewController: UIViewController {
+@objc class DayMenuViewController: UIViewController {
 
     @IBOutlet weak var periodSegment: UISegmentedControl!
     @IBOutlet weak var dbLabel: UILabel!
@@ -32,7 +32,7 @@ class DayMenuViewController: UIViewController {
         var usLocale = NSLocale(localeIdentifier: "en_US")
         var dateFormatter = NSDateFormatter()
         dateFormatter.locale = usLocale
-        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle    
+        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
         self.dateLabel.text = "Menu for \(dateFormatter.stringFromDate(self.date!))"
         updateTable()
     }
