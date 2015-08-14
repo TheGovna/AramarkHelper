@@ -10,12 +10,23 @@ import UIKit
 
 class DayMenuViewController: UIViewController {
 
+    @IBOutlet weak var periodSegment: UISegmentedControl!
+    @IBOutlet weak var dbLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var menuTableView: UITableView!
+    
+    @IBAction func selectedPeriod(sender: AnyObject) {
+        updateTable()
+    }
+    var date : NSDate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        updateTable()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,5 +42,13 @@ class DayMenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK: - Private helper function
+    
+    func updateTable(){
+        println("selected : \(periodSegment.selectedSegmentIndex)")
+        var string:[Int] = [periodSegment.selectedSegmentIndex]
+    }
+    
+    
 }

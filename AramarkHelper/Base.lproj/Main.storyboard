@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today's Menu-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="DayMenuViewController" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="DayMenuViewController" customModule="AramarkHelper" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -28,29 +29,78 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1hd-BV-q7b">
+                                <rect key="frame" x="239" y="93" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Breakfast"/>
+                                    <segment title="Lunch"/>
+                                    <segment title="Dinner"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectedPeriod:" destination="9pv-A4-QxB" eventType="valueChanged" id="Nyl-7l-7vZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vg8-In-SIf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Vg8-In-SIf" secondAttribute="bottom" id="8cS-mG-Rh5"/>
+                            <constraint firstItem="Vg8-In-SIf" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="8tA-2R-etc"/>
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="9GN-AS-dXp"/>
                             <constraint firstAttribute="centerX" secondItem="H9h-bD-X48" secondAttribute="centerX" id="MFK-5P-qWR"/>
+                            <constraint firstItem="1hd-BV-q7b" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="MTu-PJ-248"/>
+                            <constraint firstItem="Vg8-In-SIf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Pi4-zl-PDB"/>
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="Rih-Bf-SMu"/>
                             <constraint firstItem="iHy-xF-P6D" firstAttribute="top" secondItem="H9h-bD-X48" secondAttribute="bottom" constant="8" symbolic="YES" id="Roy-Qw-feN"/>
+                            <constraint firstItem="Vg8-In-SIf" firstAttribute="top" secondItem="1hd-BV-q7b" secondAttribute="bottom" constant="8" id="Sx3-mH-cLU"/>
+                            <constraint firstItem="1hd-BV-q7b" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="U1g-eM-8oV"/>
+                            <constraint firstItem="1hd-BV-q7b" firstAttribute="top" secondItem="iHy-xF-P6D" secondAttribute="bottom" constant="15" id="gNc-Ua-EPj"/>
                             <constraint firstAttribute="centerX" secondItem="iHy-xF-P6D" secondAttribute="centerX" id="laM-Pu-S4G"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Vg8-In-SIf"/>
+                            </mask>
                             <mask key="constraints">
+                                <exclude reference="MTu-PJ-248"/>
+                                <exclude reference="U1g-eM-8oV"/>
+                                <exclude reference="gNc-Ua-EPj"/>
                                 <exclude reference="Rih-Bf-SMu"/>
+                                <exclude reference="8tA-2R-etc"/>
+                                <exclude reference="Pi4-zl-PDB"/>
+                                <exclude reference="Sx3-mH-cLU"/>
+                                <exclude reference="8cS-mG-Rh5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Vg8-In-SIf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MTu-PJ-248"/>
+                                <include reference="U1g-eM-8oV"/>
+                                <include reference="gNc-Ua-EPj"/>
+                                <include reference="8tA-2R-etc"/>
+                                <include reference="Pi4-zl-PDB"/>
+                                <include reference="Sx3-mH-cLU"/>
+                                <include reference="8cS-mG-Rh5"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Today's Menu" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="dbLabel" destination="H9h-bD-X48" id="Equ-6Z-nrW"/>
+                        <outlet property="dateLabel" destination="iHy-xF-P6D" id="bV4-hV-cVN"/>
+                        <outlet property="dbLabel" destination="H9h-bD-X48" id="B19-rr-VgW"/>
+                        <outlet property="menuTableView" destination="Vg8-In-SIf" id="w1u-ob-WNY"/>
+                        <outlet property="periodSegment" destination="1hd-BV-q7b" id="qOU-0k-4Qk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="750" y="-320.25"/>
         </scene>
         <!--Monthly Menu-->
         <scene sceneID="fIQ-CJ-PjW">
