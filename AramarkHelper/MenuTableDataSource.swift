@@ -20,31 +20,43 @@ var service : GTLServiceAramarkHelperMenuFetcher{
 }
 var _service : GTLServiceAramarkHelperMenuFetcher?
 
-class MenuTableDataSource:NSObject, UITableViewDataSource, UITableViewDelegate{
+class MenuTableDataSource:NSObject, UITableViewDataSource{
     
+    class CategoryWithFood {
+        var name:NSString
+        var foods:[String]
+        
+        init(name : NSString){
+            self.name = name
+            self.foods = []
+        }
+    }
+    
+    var view : UITableView
     var date : NSDate
     var periodTag : Int
     var periodName : NSString
+    var categoryWithFoods : [CategoryWithFood]
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return categoryWithFoods.count
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return categoryWithFoods[section].name as String
+    }
     
     @objc func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return categoryWithFoods[section].foods.count
     }
     
     @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
-        var period:NSString
-        if  periodTag == 0{
-            period = "Breakfast"
-        } else if periodTag == 1{
-            period = "Lunch"
-        } else {
-            period = "Dinner"
-        }
-        cell.textLabel?.text = "\(period)";
+        cell.textLabel?.text = categoryWithFoods[indexPath.section].foods[indexPath.row]
         return cell;
     }
    
-    init(date : NSDate, periodTag : Int) {
+    init(date : NSDate, periodTag : Int, tView : UITableView) {
         self.date = date
         self.periodTag = periodTag
         if  periodTag == 0{
@@ -54,8 +66,11 @@ class MenuTableDataSource:NSObject, UITableViewDataSource, UITableViewDelegate{
         } else {
             periodName = "Dinner"
         }
+        categoryWithFoods = []
+        self.view = tView
         super.init()
         _fetchDatafromServer()
+        
     }
     
     //MARK: -- self helper methods
@@ -84,6 +99,20 @@ class MenuTableDataSource:NSObject, UITableViewDataSource, UITableViewDelegate{
             if let categories = categoryCollection.items() as? [GTLAramarkHelperMenuFetcherCategory]{
                 for category in categories{
                     println(category.name)
+                    let dishQuery = GTLQueryAramarkHelperMenuFetcher.queryForDishListWithParent(category.entityKey as String);
+                    service.executeQuery(dishQuery, completionHandler: { (dTicket, dResponse, dError) -> Void in
+                        let newCategoryWF = CategoryWithFood(name:category.name)
+                        let dishCollection = dResponse as! GTLAramarkHelperMenuFetcherDishCollection
+                        if let dishes = dishCollection.items() as? [GTLAramarkHelperMenuFetcherDish]{
+                            for dish in dishes{
+                                println(dish.name)
+                                newCategoryWF.foods.append(dish.name)
+                            }
+                            self.categoryWithFoods.append(newCategoryWF)
+                            println(self.categoryWithFoods.count)
+                            self.view.reloadData()
+                        }
+                    })
                 }
             }
         })
