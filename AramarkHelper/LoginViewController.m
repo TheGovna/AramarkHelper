@@ -54,7 +54,7 @@
         NSNumber *db = dbDictionary[@"STUDENT"];
         NSLog(@"DB: %@", db);
         
-        [self navigateToTabBarController];
+        [self navigateToTabBarControllerWithDbAmount:[db doubleValue]];
     }];
     [dataTask resume];
 }
@@ -64,12 +64,13 @@
     [_responseData appendData:data];
 }
 
-- (void)navigateToTabBarController
+- (void)navigateToTabBarControllerWithDbAmount:(double)dbAmount
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString * storyboardName = @"Main";
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
         MainTabBarController * tabBarController = (MainTabBarController *) [storyboard instantiateViewControllerWithIdentifier:@"TabBarControllerIdentifier"];
+        tabBarController.dbAmount = dbAmount;
         tabBarController.selectedIndex = 0;
         [self presentViewController:tabBarController animated:YES completion:nil];
     });

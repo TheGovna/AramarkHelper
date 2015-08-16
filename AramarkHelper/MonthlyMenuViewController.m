@@ -9,6 +9,7 @@
 #import "MonthlyMenuViewController.h"
 #define showMenuSeguoIdentifier @"ShowMenuSeguoIdentifier"
 #import "AramarkHelper-Swift.h"
+#import "MainTabBarController.h"
 
 @interface MonthlyMenuViewController ()
 {
@@ -26,6 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    MainTabBarController *mainTabBarController = (MainTabBarController *) self.tabBarController;
+    if (mainTabBarController.dbAmount) {
+        self.dbLabel.text = [NSString stringWithFormat:@"Your current DB: $%.2f", mainTabBarController.dbAmount];
+    }
     
     _calendarManager = [JTCalendarManager new];
     _calendarManager.delegate = self;

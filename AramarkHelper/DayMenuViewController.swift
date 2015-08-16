@@ -14,6 +14,7 @@ import UIKit
     @IBOutlet weak var dbLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var menuTableView: UITableView!
+    
     var menuDataSource : MenuTableDataSource?
     
     @IBAction func selectedPeriod(sender: AnyObject) {
@@ -23,6 +24,10 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var mainTabBarController : MainTabBarController = self.tabBarController as! MainTabBarController;
+        var dbAmount : String = String(format: "%.2f", mainTabBarController.dbAmount)
+        self.dbLabel.text = "Your current DB: $\(dbAmount)"
     }
 
     override func viewWillAppear(animated: Bool) {

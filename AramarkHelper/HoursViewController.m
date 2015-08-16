@@ -7,6 +7,7 @@
 //
 
 #import "HoursViewController.h"
+#import "MainTabBarController.h"
 
 @interface HoursViewController ()
 
@@ -16,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    MainTabBarController *mainTabBarController = (MainTabBarController *) self.tabBarController;
+    if (mainTabBarController.dbAmount) {
+        self.dbLabel.text = [NSString stringWithFormat:@"Your current DB: $%.2f", mainTabBarController.dbAmount];
+    }
     
     [self.diningHallHoursView setHidden:NO];
     [self.worxHoursView setHidden:YES];

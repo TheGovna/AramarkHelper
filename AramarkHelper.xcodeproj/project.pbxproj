@@ -309,16 +309,16 @@
 				A12ED8821B72A6B000B88E1D /* MonthlyMenuViewController.m */,
 				A1FF82E61B7481BB005C9EC4 /* HoursViewController.h */,
 				A1FF82E71B7481BB005C9EC4 /* HoursViewController.m */,
+				0A9E415C1B7E08F800B178B4 /* DayMenuViewController.swift */,
 				A12ED8841B72A6B000B88E1D /* Main.storyboard */,
-				A12ED8871B72A6B000B88E1D /* Images.xcassets */,
 				A12ED8891B72A6B000B88E1D /* LaunchScreen.xib */,
 				A1731ECE1B77F82B0085898D /* DiningHallHoursView.h */,
 				A1731ECF1B77F82B0085898D /* DiningHallHoursView.m */,
-				0A9E415C1B7E08F800B178B4 /* DayMenuViewController.swift */,
 				0A9E415B1B7E08F800B178B4 /* AramarkHelper-Bridging-Header.h */,
 				0A9E41CE1B7E205900B178B4 /* MenuTableDataSource.swift */,
 				A141D73B1B812F9800B8D177 /* MainTabBarController.h */,
 				A141D73C1B812F9800B8D177 /* MainTabBarController.m */,
+				A12ED8871B72A6B000B88E1D /* Images.xcassets */,
 				A12ED8771B72A6B000B88E1D /* Supporting Files */,
 			);
 			path = AramarkHelper;
