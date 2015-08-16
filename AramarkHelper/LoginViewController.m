@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "MainTabBarController.h"
 
 @interface LoginViewController ()
 
@@ -22,17 +23,8 @@
     [super viewDidLoad];
     
     _responseData = [[NSMutableData alloc] init];
+    self.passwordTextField.secureTextEntry = YES;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)loginButtonPressed:(id)sender {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://71.227.191.189:5000/"]];
@@ -55,13 +47,41 @@
         NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
         NSLog(@"data: %@", dataString);
+        
+        NSDictionary* dbDictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:kNilOptions
+                                                               error:&error];
+        NSNumber *db = dbDictionary[@"STUDENT"];
+        NSLog(@"DB: %@", db);
+        
+        [self navigateToTabBarController];
     }];
     [dataTask resume];
 }
 
-// MT 8/6/15: Do we really need this?
--(void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     [_responseData appendData:data];
 }
+
+- (void)navigateToTabBarController
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSString * storyboardName = @"Main";
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+        MainTabBarController * tabBarController = (MainTabBarController *) [storyboard instantiateViewControllerWithIdentifier:@"TabBarControllerIdentifier"];
+        tabBarController.selectedIndex = 0;
+        [self presentViewController:tabBarController animated:YES completion:nil];
+    });
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 @end
