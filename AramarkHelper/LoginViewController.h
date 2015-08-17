@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIView *loadingView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicatorView;
+@property (weak, nonatomic) IBOutlet UILabel *unableToLoginLabel;
 
 - (IBAction)loginButtonPressed:(id)sender;
 

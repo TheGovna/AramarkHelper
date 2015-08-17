@@ -53,6 +53,7 @@
 		A12ED8971B72A6B000B88E1D /* AramarkHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8961B72A6B000B88E1D /* AramarkHelperTests.m */; };
 		A12ED8A11B72A7B000B88E1D /* AramarkHelper.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A12ED8A01B72A7B000B88E1D /* AramarkHelper.xcdatamodel */; };
 		A141D73D1B812F9800B8D177 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A141D73C1B812F9800B8D177 /* MainTabBarController.m */; };
+		A141D7401B81673700B8D177 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A141D73F1B81673700B8D177 /* LoadingView.m */; };
 		A1731ED01B77F82B0085898D /* DiningHallHoursView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1731ECF1B77F82B0085898D /* DiningHallHoursView.m */; };
 		A1E672FF1B797E680055DED4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A1E672FE1B797E680055DED4 /* Podfile */; };
 		A1FF82E81B7481BB005C9EC4 /* HoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FF82E71B7481BB005C9EC4 /* HoursViewController.m */; };
@@ -164,6 +165,8 @@
 		A12ED8A01B72A7B000B88E1D /* AramarkHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AramarkHelper.xcdatamodel; sourceTree = "<group>"; };
 		A141D73B1B812F9800B8D177 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		A141D73C1B812F9800B8D177 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		A141D73E1B81673700B8D177 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		A141D73F1B81673700B8D177 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		A1731ECE1B77F82B0085898D /* DiningHallHoursView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiningHallHoursView.h; sourceTree = "<group>"; };
 		A1731ECF1B77F82B0085898D /* DiningHallHoursView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiningHallHoursView.m; sourceTree = "<group>"; };
 		A1E672FE1B797E680055DED4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 				A141D73C1B812F9800B8D177 /* MainTabBarController.m */,
 				A12ED8871B72A6B000B88E1D /* Images.xcassets */,
 				A12ED8771B72A6B000B88E1D /* Supporting Files */,
+				A141D73E1B81673700B8D177 /* LoadingView.h */,
+				A141D73F1B81673700B8D177 /* LoadingView.m */,
 			);
 			path = AramarkHelper;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				0A9E41C41B7E0C8400B178B4 /* GTLAramarkHelperMenuFetcherPeriod.m in Sources */,
 				A12ED87D1B72A6B000B88E1D /* AppDelegate.m in Sources */,
 				0A9E41941B7E0ADB00B178B4 /* GTLQuery.m in Sources */,
+				A141D7401B81673700B8D177 /* LoadingView.m in Sources */,
 				0A9E41961B7E0ADB00B178B4 /* GTLService.m in Sources */,
 				0A9E41CF1B7E205900B178B4 /* MenuTableDataSource.swift in Sources */,
 				0A9E41A91B7E0ADB00B178B4 /* GTMOAuth2SignIn.m in Sources */,

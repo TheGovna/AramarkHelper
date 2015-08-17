@@ -27,6 +27,9 @@
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
+    self.loadingView.hidden = NO;
+    [self.loadingIndicatorView startAnimating];
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://71.227.191.189:5000/"]];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -44,17 +47,26 @@
     [request setHTTPBody:postData];
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        self.loadingView.hidden = YES;
+        
+        
         NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
         NSLog(@"data: %@", dataString);
         
         NSDictionary* dbDictionary = [NSJSONSerialization JSONObjectWithData:data
-                                                             options:kNilOptions
-                                                               error:&error];
+                                                                     options:kNilOptions
+                                                                       error:&error];
         NSNumber *db = dbDictionary[@"STUDENT"];
         NSLog(@"DB: %@", db);
         
-        [self navigateToTabBarControllerWithDbAmount:[db doubleValue]];
+        if (db) {
+            [self navigateToTabBarControllerWithDbAmount:[db doubleValue]];
+        } else {
+            // error message to user here
+            self.unableToLoginLabel.hidden = NO;
+        }
+        
     }];
     [dataTask resume];
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K0L-l8-Yk8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -256,7 +256,6 @@ Sunday: Closed </string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="jq7-Rz-Et3" secondAttribute="centerX" id="c6j-Jf-rDA"/>
                                     <constraint firstItem="jq7-Rz-Et3" firstAttribute="top" secondItem="LXF-dM-kV6" secondAttribute="top" constant="8" id="fkp-rZ-drr"/>
@@ -323,7 +322,6 @@ Saturday &amp; Sunday: Closed</string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="bCY-nM-Haq" secondAttribute="centerX" id="2kE-Q7-UMl"/>
                                     <constraint firstAttribute="centerX" secondItem="hn6-w9-uJX" secondAttribute="centerX" id="Kt4-j3-FFB"/>
@@ -356,7 +354,6 @@ Sunday: 6:00 pm - Midnight </string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Hpf-Ty-0jB" firstAttribute="top" secondItem="fuL-dF-G6B" secondAttribute="top" constant="8" id="UgU-qq-rAi"/>
                                     <constraint firstAttribute="centerX" secondItem="Hpf-Ty-0jB" secondAttribute="centerX" id="e8U-qC-Gzj"/>
@@ -379,7 +376,6 @@ Sunday: 4:00 pm - Midnight </string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="4lG-95-luL" firstAttribute="top" secondItem="jel-HK-Y60" secondAttribute="top" constant="8" id="pz5-8B-75w"/>
                                     <constraint firstAttribute="centerX" secondItem="4lG-95-luL" secondAttribute="centerX" id="tUG-ZE-GCG"/>
@@ -499,7 +495,7 @@ Sunday: 4:00 pm - Midnight </string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aramark Helper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-hy-TU4">
-                                <rect key="frame" x="231" y="28" width="138" height="24"/>
+                                <rect key="frame" x="231" y="28" width="137.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -513,10 +509,38 @@ Sunday: 4:00 pm - Midnight </string>
                                     <action selector="loginButtonPressed:" destination="K0L-l8-Yk8" eventType="touchUpInside" id="QxS-6g-N9X"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXx-90-VPq">
+                                <rect key="frame" x="234" y="153" width="132" height="21"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="P3y-l2-WDh">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Wait..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fV-RM-fPb">
+                                        <rect key="frame" x="28" y="0.0" width="104" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OHA-GX-fgG"/>
+                                    <constraint firstAttribute="width" constant="132" id="ZAt-XL-hZx"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to login!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlw-2Y-PPA">
+                                <rect key="frame" x="240" y="182" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pXx-90-VPq" firstAttribute="top" secondItem="eSL-gQ-1b9" secondAttribute="bottom" constant="8" id="94H-zG-JZj"/>
+                            <constraint firstAttribute="centerX" secondItem="Zlw-2Y-PPA" secondAttribute="centerX" id="Cav-1Q-oyS"/>
                             <constraint firstItem="yFH-qf-wvi" firstAttribute="top" secondItem="PMe-hy-TU4" secondAttribute="bottom" constant="25" id="EKY-xv-IcO"/>
+                            <constraint firstItem="Zlw-2Y-PPA" firstAttribute="top" secondItem="pXx-90-VPq" secondAttribute="bottom" constant="8" id="GbM-Yd-7Ap"/>
+                            <constraint firstAttribute="centerX" secondItem="pXx-90-VPq" secondAttribute="centerX" id="Jh1-Ma-l1T"/>
                             <constraint firstAttribute="centerX" secondItem="eSL-gQ-1b9" secondAttribute="centerX" id="NLI-pg-CZV"/>
                             <constraint firstAttribute="centerX" secondItem="PMe-hy-TU4" secondAttribute="centerX" id="ckZ-tm-cNp"/>
                             <constraint firstAttribute="centerX" secondItem="yFH-qf-wvi" secondAttribute="centerX" id="crU-x7-MwR"/>
@@ -528,7 +552,10 @@ Sunday: 4:00 pm - Midnight </string>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="yFH-qf-wvi" id="GDR-9q-xxA"/>
+                        <outlet property="loadingIndicatorView" destination="P3y-l2-WDh" id="rCx-Tf-U6u"/>
+                        <outlet property="loadingView" destination="pXx-90-VPq" id="eK8-ko-nNA"/>
                         <outlet property="passwordTextField" destination="eSL-gQ-1b9" id="NGH-w9-o44"/>
+                        <outlet property="unableToLoginLabel" destination="Zlw-2Y-PPA" id="ZGI-nX-7Dx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0p-hq-fuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
