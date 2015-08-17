@@ -10,6 +10,7 @@
 #define showMenuSeguoIdentifier @"ShowMenuSeguoIdentifier"
 #import "AramarkHelper-Swift.h"
 #import "MainTabBarController.h"
+#import "LoginViewController.h"
 
 @interface MonthlyMenuViewController ()
 {
@@ -197,4 +198,10 @@
     }
 }
 
+- (IBAction)pressedLogoutButton:(id)sender {
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    LoginViewController * loginViewController = (LoginViewController *) [storyboard instantiateViewControllerWithIdentifier:@"LoginViewControllerIdentifier"];
+    [self presentViewController:loginViewController animated:YES completion:nil];
+}
 @end

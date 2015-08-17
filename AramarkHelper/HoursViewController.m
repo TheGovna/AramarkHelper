@@ -8,6 +8,7 @@
 
 #import "HoursViewController.h"
 #import "MainTabBarController.h"
+#import "LoginViewController.h"
 
 @interface HoursViewController ()
 
@@ -68,5 +69,12 @@
         default:
             break;
     }
+}
+
+- (IBAction)pressedLogoutButton:(id)sender {
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    LoginViewController * loginViewController = (LoginViewController *) [storyboard instantiateViewControllerWithIdentifier:@"LoginViewControllerIdentifier"];
+    [self presentViewController:loginViewController animated:YES completion:nil];
 }
 @end

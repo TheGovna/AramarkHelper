@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K0L-l8-Yk8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9h-bD-X48">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9h-bD-X48">
                                 <rect key="frame" x="212" y="28" width="175" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu for August 6, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-xF-P6D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Menu for August 6, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-xF-P6D">
                                 <rect key="frame" x="205" y="57" width="189.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,6 +41,15 @@
                                     <action selector="selectedPeriod:" destination="9pv-A4-QxB" eventType="valueChanged" id="Nyl-7l-7vZ"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2D-0q-Rwb">
+                                <rect key="frame" x="535" y="24" width="49" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedLogoutButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="GqD-Kw-xLJ"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YFg-VG-xGf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,6 +67,8 @@
                             <constraint firstItem="H9h-bD-X48" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="Rih-Bf-SMu"/>
                             <constraint firstItem="iHy-xF-P6D" firstAttribute="top" secondItem="H9h-bD-X48" secondAttribute="bottom" constant="8" symbolic="YES" id="Roy-Qw-feN"/>
                             <constraint firstItem="1hd-BV-q7b" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="U1g-eM-8oV"/>
+                            <constraint firstItem="w2D-0q-Rwb" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="24" id="YVd-5v-01T"/>
+                            <constraint firstAttribute="trailing" secondItem="w2D-0q-Rwb" secondAttribute="trailing" constant="16" id="ZMR-zd-Nbe"/>
                             <constraint firstItem="1hd-BV-q7b" firstAttribute="top" secondItem="iHy-xF-P6D" secondAttribute="bottom" constant="15" id="gNc-Ua-EPj"/>
                             <constraint firstAttribute="centerX" secondItem="iHy-xF-P6D" secondAttribute="centerX" id="laM-Pu-S4G"/>
                         </constraints>
@@ -164,7 +175,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Monthly Menu" id="gPf-Sj-b4U"/>
-                    <navigationItem key="navigationItem" id="T9Z-83-qFk"/>
+                    <navigationItem key="navigationItem" id="T9Z-83-qFk">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="kAQ-ZA-NCv">
+                            <connections>
+                                <action selector="pressedLogoutButton:" destination="XRz-qI-2r9" id="znE-ZK-biM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarContentView" destination="Bz6-7A-PGg" id="TYK-8Z-Kvs"/>
@@ -217,13 +234,13 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current DB: $0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfa-2A-gPx">
-                                <rect key="frame" x="212" y="28" width="175" height="21"/>
+                                <rect key="frame" x="212" y="28" width="174.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-dM-kV6" userLabel="The Worx Hours View">
-                                <rect key="frame" x="16" y="92" width="568" height="451"/>
+                                <rect key="frame" x="16" y="92" width="568" height="450.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq7-Rz-Et3" userLabel="The Worx Hours Text View">
                                         <rect key="frame" x="159" y="8" width="250" height="90"/>
@@ -246,7 +263,7 @@ Sunday: Closed </string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TzS-9n-lVw" userLabel="Dining Hall Hours View">
-                                <rect key="frame" x="16" y="92" width="568" height="451"/>
+                                <rect key="frame" x="16" y="92" width="568" height="450.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQq-CS-Icp">
                                         <rect key="frame" x="247" y="8" width="73" height="20.5"/>
@@ -323,7 +340,7 @@ Saturday &amp; Sunday: Closed</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuL-dF-G6B" userLabel="Logans Hours View">
-                                <rect key="frame" x="16" y="92" width="568" height="451"/>
+                                <rect key="frame" x="16" y="92" width="568" height="450.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpf-Ty-0jB" userLabel="The Worx Hours Text View">
                                         <rect key="frame" x="159" y="8" width="250" height="90"/>
@@ -346,7 +363,7 @@ Sunday: 6:00 pm - Midnight </string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jel-HK-Y60" userLabel="Subway Hours View">
-                                <rect key="frame" x="16" y="92" width="568" height="451"/>
+                                <rect key="frame" x="16" y="92" width="568" height="450.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lG-95-luL" userLabel="The Worx Hours Text View">
                                         <rect key="frame" x="159" y="8" width="250" height="90"/>
@@ -368,12 +385,23 @@ Sunday: 4:00 pm - Midnight </string>
                                     <constraint firstAttribute="centerX" secondItem="4lG-95-luL" secondAttribute="centerX" id="tUG-ZE-GCG"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-UJ-SRc">
+                                <rect key="frame" x="535" y="24" width="49" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedLogoutButton:" destination="tTF-NM-mKW" eventType="touchUpInside" id="ctp-I1-7iJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YmI-UJ-SRc" firstAttribute="top" secondItem="SQA-WR-Kl9" secondAttribute="bottom" constant="4" id="04M-Ao-Iqc"/>
                             <constraint firstItem="jel-HK-Y60" firstAttribute="top" secondItem="nXg-fT-SvQ" secondAttribute="bottom" constant="8" symbolic="YES" id="6nX-N7-VZy"/>
                             <constraint firstAttribute="centerX" secondItem="nXg-fT-SvQ" secondAttribute="centerX" id="7cV-03-7jW"/>
                             <constraint firstItem="oq3-9z-rJh" firstAttribute="top" secondItem="LXF-dM-kV6" secondAttribute="bottom" constant="8" symbolic="YES" id="8IQ-6D-uGR"/>
+                            <constraint firstAttribute="trailing" secondItem="YmI-UJ-SRc" secondAttribute="trailing" constant="16" id="A9z-dM-aLr"/>
                             <constraint firstItem="TzS-9n-lVw" firstAttribute="leading" secondItem="ijc-FJ-CYm" secondAttribute="leading" constant="16" id="CAH-RF-UHJ"/>
                             <constraint firstItem="jel-HK-Y60" firstAttribute="leading" secondItem="ijc-FJ-CYm" secondAttribute="leading" constant="16" id="Crw-wH-dh1"/>
                             <constraint firstAttribute="trailing" secondItem="fuL-dF-G6B" secondAttribute="trailing" constant="16" id="Gwg-Gx-2LP"/>
@@ -445,7 +473,7 @@ Sunday: 4:00 pm - Midnight </string>
         <!--Login View Controller-->
         <scene sceneID="WZu-Al-cJ7">
             <objects>
-                <viewController id="K0L-l8-Yk8" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewControllerIdentifier" id="K0L-l8-Yk8" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ns5-3e-6y3"/>
                         <viewControllerLayoutGuide type="bottom" id="zVa-An-zSX"/>

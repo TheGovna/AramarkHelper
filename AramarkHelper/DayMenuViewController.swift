@@ -41,11 +41,13 @@ import UIKit
         self.dateLabel.text = "Menu for \(dateFormatter.stringFromDate(self.date!))"
         updateTable()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    @IBAction func pressedLogoutButton(sender: AnyObject) {
+        var storyBoardName : String = "Main"
+        var storyboard : UIStoryboard = UIStoryboard(name: storyBoardName, bundle: nil)
+        var loginViewController : LoginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewControllerIdentifier") as! LoginViewController
+        presentViewController(loginViewController, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

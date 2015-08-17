@@ -18,5 +18,7 @@
 
 @property (strong, nonatomic) JTCalendarManager *calendarManager;
 
+- (IBAction)pressedLogoutButton:(id)sender;
+
 @end
 

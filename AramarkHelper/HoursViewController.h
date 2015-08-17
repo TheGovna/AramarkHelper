@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *subwayHoursView;
 
 - (IBAction)selectedSegmentedControl:(id)sender;
+- (IBAction)pressedLogoutButton:(id)sender;
 
 @end
