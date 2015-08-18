@@ -102,7 +102,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Today's Menu" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Today's Menu" image="023_Invitation" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="dateLabel" destination="iHy-xF-P6D" id="bV4-hV-cVN"/>
                         <outlet property="dbLabel" destination="H9h-bD-X48" id="B19-rr-VgW"/>
@@ -174,7 +174,7 @@
                             <constraint firstAttribute="trailing" secondItem="31C-Gq-tOG" secondAttribute="trailing" id="uc0-BM-2Q0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Monthly Menu" id="gPf-Sj-b4U"/>
+                    <tabBarItem key="tabBarItem" title="Monthly Menu" image="031_Calculator" id="gPf-Sj-b4U"/>
                     <navigationItem key="navigationItem" id="T9Z-83-qFk">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="kAQ-ZA-NCv">
                             <connections>
@@ -451,7 +451,7 @@ Sunday: 4:00 pm - Midnight </string>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hours" id="CwA-Qa-78M"/>
+                    <tabBarItem key="tabBarItem" title="Hours" image="099_Timer" id="CwA-Qa-78M"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dbLabel" destination="Cfa-2A-gPx" id="jjb-C0-uZD"/>
@@ -518,7 +518,7 @@ Sunday: 4:00 pm - Midnight </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Wait..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fV-RM-fPb">
                                         <rect key="frame" x="28" y="0.0" width="104" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -584,7 +584,9 @@ Sunday: 4:00 pm - Midnight </string>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="023_Invitation" width="21" height="15"/>
+        <image name="031_Calculator" width="19" height="23"/>
+        <image name="099_Timer" width="20" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="z8q-uw-cbT"/>
